@@ -27,19 +27,12 @@ def total_even_pairs(src)
   row = 0
   
   while row < src.count do
-    element = src[row]
-    element_index = 0 
     element_sum = 0
 
-    while element_index < element.count do
-      if (element[element_index] % 2) == 0
-        element_sum += element[element_index]
-      else
-        element_sum = 0
-        element_index = element.count
-      end
-      element_index += 1
+    if ((src[row][0] % 2) == 0) && ((src[row][1] % 2) == 0)
+      element_sum += ((src[row][0] + (src[row][1])
     end
+
     sum += element_sum
     row += 1
   end
